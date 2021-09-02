@@ -60,7 +60,7 @@ public class MeshGeneratorV1 : MonoBehaviour
 
     private Vector2[] GetOffsetSeed()
     {
-        seed = 947; //Random.Range(0, 1000);
+        seed = Random.Range(0, 1000);
         // changes area of map
         System.Random prng = new System.Random(seed);
         Vector2[] octaveOffsets = new Vector2[octaves];
