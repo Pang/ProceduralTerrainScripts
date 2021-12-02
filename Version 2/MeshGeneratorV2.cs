@@ -82,8 +82,8 @@ public class MeshGeneratorV2 : MonoBehaviour
 
     private Vector2[] GetOffsetSeed()
     {
-        // seed = Random.Range(0, 1000);
-        seed = 540;
+        seed = Random.Range(0, 1000);
+        
         // changes area of map
         System.Random prng = new System.Random(seed);
         Vector2[] octaveOffsets = new Vector2[octaves];
@@ -103,7 +103,7 @@ public class MeshGeneratorV2 : MonoBehaviour
         float persistence = 0.5f;
         float noiseHeight = 0;
 
-        // 
+        // loop over octaves
         for (int y = 0; y < octaves; y++)
         {
             float mapZ = z / scale * frequency + octaveOffsets[y].y;
