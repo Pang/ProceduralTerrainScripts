@@ -109,7 +109,6 @@ public class MeshGeneratorV2 : MonoBehaviour
             float mapZ = z / scale * frequency + octaveOffsets[y].y;
             float mapX = x / scale * frequency + octaveOffsets[y].x;
 
-            // Create perlinValues and shape island with fallOff Map. 
             //The *2-1 is to create a flat floor level
             float perlinValue = (Mathf.PerlinNoise(mapZ, mapX)) * 2 - 1;
             noiseHeight += heightCurve.Evaluate(perlinValue) * amplitude;
@@ -160,6 +159,7 @@ public class MeshGeneratorV2 : MonoBehaviour
     {
         colors = new Color[vertices.Length];
 
+        // Loop over vertices and apply a color from the depending on height (y axis value)
         for (int i = 0, z = 0; z < vertices.Length; z++)
         {
             float height = Mathf.InverseLerp(minTerrainheight, maxTerrainheight, vertices[i].y);
