@@ -104,7 +104,7 @@ public class MeshGeneratorV1 : MonoBehaviour
         int tris = 0;
 
         // loop through rows
-        for (int z = 0; z < xSize; z++)
+        for (int z = 0; z < zSize; z++)
         {
             // fill all columns in row
             for (int x = 0; x < xSize; x++)
