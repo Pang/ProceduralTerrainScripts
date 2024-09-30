@@ -136,7 +136,7 @@ public class MeshGeneratorV2 : MonoBehaviour
         int vert = 0;
         int tris = 0;
         // Go to next row
-        for (int z = 0; z < xSize; z++)
+        for (int z = 0; z < zSize; z++)
         {
             // fill row
             for (int x = 0; x < xSize; x++)
